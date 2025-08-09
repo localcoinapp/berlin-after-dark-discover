@@ -18,11 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Berlin Theme Variants
+        neon: "bg-gradient-neon text-foreground font-semibold hover:shadow-[var(--shadow-neon)] transition-all duration-300 border border-neon-purple/30",
+        club: "bg-neon-purple text-foreground font-bold hover:bg-neon-purple/80 hover:shadow-[var(--shadow-neon)] transition-all duration-300",
+        underground: "bg-graffiti-bg text-foreground border border-neon-cyan/50 hover:border-neon-cyan hover:shadow-[var(--shadow-cyan)] transition-all duration-300",
+        glow: "bg-gradient-to-r from-neon-purple to-neon-cyan text-foreground font-bold hover:scale-105 hover:shadow-[var(--glow-intense)] transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-12 text-lg",
         icon: "h-10 w-10",
       },
     },

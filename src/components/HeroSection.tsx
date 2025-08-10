@@ -27,40 +27,37 @@ const HeroSection = () => {
           <div className="flex items-center justify-center space-x-3 mb-8">
             <MapPin className="w-8 h-8 text-neon-cyan" />
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-neon bg-clip-text text-transparent">
-              Discover Berlin
+              {t('hero.brand')}
             </h1>
           </div>
           
-          {/* Tagline */}
           <p className="text-xl md:text-3xl font-semibold text-foreground/90 mb-6">
-            Berlin's Underground Culture
+            {t('hero.tagline1')}
           </p>
           <p className="text-lg md:text-2xl text-muted-foreground mb-8">
-            Meets Local Commerce
+            {t('hero.tagline2')}
           </p>
           
-          {/* Description */}
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Connect with Berlin's authentic culture. From underground techno clubs to hidden local gems, 
-            discover exclusive deals, book experiences, and chat directly with local merchants.
+            {t('hero.description')}
           </p>
           
           {/* Features Preview */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
             <div className="bg-card/50 backdrop-blur-sm border border-neon-purple/30 rounded-lg p-6 hover:border-neon-purple transition-all duration-300">
               <Smartphone className="w-8 h-8 text-neon-purple mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-2">One App</h3>
-              <p className="text-sm text-muted-foreground">Everything Berlin in your pocket</p>
+              <h3 className="font-semibold text-foreground mb-2">{t('hero.features.one.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('hero.features.one.desc')}</p>
             </div>
             <div className="bg-card/50 backdrop-blur-sm border border-neon-cyan/30 rounded-lg p-6 hover:border-neon-cyan transition-all duration-300">
               <MapPin className="w-8 h-8 text-neon-cyan mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-2">Local Only</h3>
-              <p className="text-sm text-muted-foreground">Support authentic Berlin businesses</p>
+              <h3 className="font-semibold text-foreground mb-2">{t('hero.features.two.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('hero.features.two.desc')}</p>
             </div>
             <div className="bg-card/50 backdrop-blur-sm border border-neon-pink/30 rounded-lg p-6 hover:border-neon-pink transition-all duration-300">
               <ArrowRight className="w-8 h-8 text-neon-pink mx-auto mb-3" />
-              <h3 className="font-semibold text-foreground mb-2">AI Powered</h3>
-              <p className="text-sm text-muted-foreground">Break language barriers effortlessly</p>
+              <h3 className="font-semibold text-foreground mb-2">{t('hero.features.three.title')}</h3>
+              <p className="text-sm text-muted-foreground">{t('hero.features.three.desc')}</p>
             </div>
           </div>
           
@@ -77,9 +74,8 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          {/* Coming Soon Badge */}
           <div className="inline-block bg-gradient-neon px-6 py-2 rounded-full text-sm font-semibold text-dark-concrete mt-8">
-            Coming Soon 2024
+            {t('hero.badge')}
           </div>
         </div>
       </div>

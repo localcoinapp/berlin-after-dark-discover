@@ -10,69 +10,70 @@ import {
   Coffee,
   Calendar
 } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const FeaturesSection = () => {
+  const { t } = useI18n();
   const userFeatures = [
     {
       icon: <Music className="w-6 h-6" />,
-      title: "Underground Events",
-      description: "Exclusive access to Berlin's hidden techno clubs and secret parties"
+      title: t("features.user.undergroundTitle"),
+      description: t("features.user.undergroundDesc"),
     },
     {
       icon: <Coffee className="w-6 h-6" />,
-      title: "Local Deals",
-      description: "Discover authentic restaurants, bars, and shops with special offers"
+      title: t("features.user.localDealsTitle"),
+      description: t("features.user.localDealsDesc"),
     },
     {
       icon: <Calendar className="w-6 h-6" />,
-      title: "Book & Pay",
-      description: "Pre-book experiences and pay securely within the app"
+      title: t("features.user.bookPayTitle"),
+      description: t("features.user.bookPayDesc"),
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
-      title: "Direct Chat",
-      description: "Communicate directly with merchants and event organizers"
+      title: t("features.user.directChatTitle"),
+      description: t("features.user.directChatDesc"),
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Language",
-      description: "AI-powered translation breaks down language barriers"
+      title: t("features.user.multiLanguageTitle"),
+      description: t("features.user.multiLanguageDesc"),
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Tourist Safe",
-      description: "Verified merchants and transparent pricing prevent scams"
-    }
+      title: t("features.user.touristSafeTitle"),
+      description: t("features.user.touristSafeDesc"),
+    },
   ];
 
   const merchantFeatures = [
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Free to Start",
-      description: "No sign-up fees, just small commission on successful transactions"
+      title: t("features.merchant.freeTitle"),
+      description: t("features.merchant.freeDesc"),
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Reach Tourists",
-      description: "Connect with thousands of visitors looking for authentic experiences"
+      title: t("features.merchant.reachTitle"),
+      description: t("features.merchant.reachDesc"),
     },
     {
       icon: <CreditCard className="w-6 h-6" />,
-      title: "Easy Payments",
-      description: "No expensive POS systems needed - get paid through the app"
-    }
+      title: t("features.merchant.paymentsTitle"),
+      description: t("features.merchant.paymentsDesc"),
+    },
   ];
 
   return (
     <section className="py-20 bg-gradient-underground">
       <div className="container mx-auto px-6">
-        {/* For Users */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-neon bg-clip-text text-transparent mb-6">
-            For Explorers
+            {t('features.usersTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Dive deep into Berlin's underground culture with features designed for the curious traveler
+            {t('features.usersSubtitle')}
           </p>
         </div>
 
@@ -95,13 +96,12 @@ const FeaturesSection = () => {
           ))}
         </div>
 
-        {/* For Merchants */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-neon-cyan to-neon-pink bg-clip-text text-transparent mb-6">
-            For Local Merchants
+            {t('features.merchantsTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Grow your business by connecting with tourists and locals who appreciate authentic Berlin culture
+            {t('features.merchantsSubtitle')}
           </p>
         </div>
 

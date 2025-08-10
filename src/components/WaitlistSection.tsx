@@ -6,8 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Mail, Send, Store } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const WaitlistSection = () => {
+  const { t } = useI18n();
   const [waitlistEmail, setWaitlistEmail] = useState("");
   const [merchantForm, setMerchantForm] = useState({
     name: "",
@@ -20,7 +22,7 @@ const WaitlistSection = () => {
     e.preventDefault();
     if (!waitlistEmail) return;
     
-    toast.success("Welcome to the Discover Berlin waitlist!");
+    toast.success(t('toast.waitlistSuccess'));
     setWaitlistEmail("");
   };
 
@@ -29,7 +31,7 @@ const WaitlistSection = () => {
     if (!merchantForm.email || !merchantForm.name) return;
     
     // In a real app, this would send to localcoinapp@gmail.com
-    toast.success("Thanks for your interest! We'll be in touch soon.");
+    toast.success(t('toast.merchantSuccess'));
     setMerchantForm({ name: "", email: "", business: "", message: "" });
   };
 
@@ -38,35 +40,35 @@ const WaitlistSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-neon bg-clip-text text-transparent mb-6">
-            Join the Movement
+            {t('waitlist.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Be part of Berlin's next chapter in local commerce and cultural discovery
+            {t('waitlist.description')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Waitlist for Users */}
-          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-neon-purple/50 transition-all duration-300">
+          <Card id="waitlist" className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-neon-purple/50 transition-all duration-300">
             <div className="text-center mb-8">
               <Mail className="w-12 h-12 text-neon-purple mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-foreground mb-2">
-                Early Access Waitlist
+                {t('waitlist.waitlistTitle')}
               </h3>
               <p className="text-muted-foreground">
-                Be among the first to experience authentic Berlin
+                {t('waitlist.waitlistSubtitle')}
               </p>
             </div>
 
             <form onSubmit={handleWaitlistSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="waitlist-email" className="text-foreground">
-                  Email Address
+                  {t('waitlist.emailLabel')}
                 </Label>
                 <Input
                   id="waitlist-email"
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder={t('waitlist.emailPlaceholder')}
                   value={waitlistEmail}
                   onChange={(e) => setWaitlistEmail(e.target.value)}
                   className="mt-2 bg-input/50 border-border/50 focus:border-neon-purple transition-colors"
@@ -80,25 +82,25 @@ const WaitlistSection = () => {
                 size="lg" 
                 className="w-full"
               >
-                Join Waitlist
+                {t('waitlist.joinButton')}
                 <Send className="ml-2 w-4 h-4" />
               </Button>
               
               <p className="text-sm text-muted-foreground text-center">
-                Get notified when we launch in Berlin
+                {t('waitlist.note')}
               </p>
             </form>
           </Card>
 
           {/* Merchant Contact */}
-          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-neon-cyan/50 transition-all duration-300">
+          <Card id="merchant" className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-neon-cyan/50 transition-all duration-300">
             <div className="text-center mb-8">
               <Store className="w-12 h-12 text-neon-cyan mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-foreground mb-2">
-                Merchant Partnership
+                {t('merchant.title')}
               </h3>
               <p className="text-muted-foreground">
-                Grow your Berlin business with us
+                {t('merchant.subtitle')}
               </p>
             </div>
 
@@ -106,12 +108,12 @@ const WaitlistSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="merchant-name" className="text-foreground">
-                    Name
+                    {t('merchant.name')}
                   </Label>
                   <Input
                     id="merchant-name"
                     type="text"
-                    placeholder="Your name"
+                    placeholder={t('merchant.namePlaceholder')}
                     value={merchantForm.name}
                     onChange={(e) => setMerchantForm({...merchantForm, name: e.target.value})}
                     className="mt-2 bg-input/50 border-border/50 focus:border-neon-cyan transition-colors"
@@ -120,12 +122,12 @@ const WaitlistSection = () => {
                 </div>
                 <div>
                   <Label htmlFor="merchant-email" className="text-foreground">
-                    Email
+                    {t('merchant.email')}
                   </Label>
                   <Input
                     id="merchant-email"
                     type="email"
-                    placeholder="business@email.com"
+                    placeholder={t('merchant.emailPlaceholder')}
                     value={merchantForm.email}
                     onChange={(e) => setMerchantForm({...merchantForm, email: e.target.value})}
                     className="mt-2 bg-input/50 border-border/50 focus:border-neon-cyan transition-colors"
@@ -136,12 +138,12 @@ const WaitlistSection = () => {
               
               <div>
                 <Label htmlFor="business-name" className="text-foreground">
-                  Business Name
+                  {t('merchant.businessName')}
                 </Label>
                 <Input
                   id="business-name"
                   type="text"
-                  placeholder="Your business"
+                  placeholder={t('merchant.businessPlaceholder')}
                   value={merchantForm.business}
                   onChange={(e) => setMerchantForm({...merchantForm, business: e.target.value})}
                   className="mt-2 bg-input/50 border-border/50 focus:border-neon-cyan transition-colors"
@@ -150,11 +152,11 @@ const WaitlistSection = () => {
               
               <div>
                 <Label htmlFor="message" className="text-foreground">
-                  Tell us about your business
+                  {t('merchant.messageLabel')}
                 </Label>
                 <Textarea
                   id="message"
-                  placeholder="What makes your Berlin business special?"
+                  placeholder={t('merchant.messagePlaceholder')}
                   value={merchantForm.message}
                   onChange={(e) => setMerchantForm({...merchantForm, message: e.target.value})}
                   className="mt-2 bg-input/50 border-border/50 focus:border-neon-cyan transition-colors"
@@ -168,12 +170,12 @@ const WaitlistSection = () => {
                 size="lg" 
                 className="w-full"
               >
-                Get Partnership Info
+                {t('merchant.button')}
                 <Send className="ml-2 w-4 h-4" />
               </Button>
               
               <p className="text-sm text-muted-foreground text-center">
-                We'll send details to localcoinapp@gmail.com
+                {t('merchant.note')}
               </p>
             </form>
           </Card>

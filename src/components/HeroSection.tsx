@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Smartphone, MapPin } from "lucide-react";
 import berlinHero from "@/assets/berlin-hero.jpg";
+import { useI18n } from "@/lib/i18n";
 
 const HeroSection = () => {
+  const { t } = useI18n();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -64,12 +66,14 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <Button variant="glow" size="xl" className="animate-glow-pulse">
-              Join Waitlist
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button asChild variant="glow" size="xl" className="animate-glow-pulse">
+              <a href="#waitlist">
+                {t('hero.ctaWaitlist')}
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
-            <Button variant="underground" size="xl">
-              For Merchants
+            <Button asChild variant="underground" size="xl">
+              <a href="#merchant">{t('hero.ctaMerchants')}</a>
             </Button>
           </div>
           

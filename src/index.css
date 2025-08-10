@@ -39,9 +39,9 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Berlin Techno Theme Colors */
-    --neon-purple: 262 83% 58%;
-    --neon-cyan: 186 100% 44%;
-    --neon-pink: 329 86% 70%;
+    --neon-purple: 262 60% 52%;
+    --neon-cyan: 186 60% 42%;
+    --neon-pink: 329 55% 62%;
     --dark-concrete: 220 15% 8%;
     --graffiti-bg: 220 15% 12%;
     --club-dark: 220 15% 6%;
@@ -49,7 +49,7 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-neon: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
     --gradient-underground: linear-gradient(180deg, hsl(var(--club-dark)), hsl(var(--dark-concrete)));
-    --gradient-club: linear-gradient(45deg, hsl(var(--neon-purple) / 0.2), hsl(var(--neon-cyan) / 0.2));
+    --gradient-club: linear-gradient(180deg, hsl(var(--graffiti-bg)), hsl(var(--club-dark)));
 
     /* Shadows & Effects */
     --shadow-neon: 0 0 20px hsl(var(--neon-purple) / 0.5);

@@ -2,24 +2,27 @@ import storyboard1 from "@/assets/storyboard-1.jpg";
 import storyboard2 from "@/assets/storyboard-2.jpg";
 import storyboard3 from "@/assets/storyboard-3.jpg";
 
+import { useI18n } from "@/lib/i18n";
+
 const StoryboardSection = () => {
+  const { t } = useI18n();
   const storySteps = [
     {
       image: storyboard1,
-      title: "Discover",
-      description: "Maria opens the Discover Berlin app on Kreuzberg's streets. Instantly, she sees local restaurants, underground clubs, and unique experiences nearby.",
+      title: t("story.step1Title"),
+      description: t("story.step1Desc"),
       step: "01"
     },
     {
       image: storyboard2,
-      title: "Connect",
-      description: "At Berghain's entrance, Maria and her friends show their pre-booked tickets from the app. No lines, no confusion - just seamless entry to Berlin's most exclusive venues.",
+      title: t("story.step2Title"),
+      description: t("story.step2Desc"),
       step: "02"
     },
     {
       image: storyboard3,
-      title: "Experience",
-      description: "Later at a local restaurant in Prenzlauer Berg, they order traditional Berlin dishes through the app, chatting with the chef about ingredients in perfect German thanks to AI translation.",
+      title: t("story.step3Title"),
+      description: t("story.step3Desc"),
       step: "03"
     }
   ];
@@ -29,10 +32,10 @@ const StoryboardSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-neon bg-clip-text text-transparent mb-6">
-            Your Berlin Journey
+            {t('story.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Follow Maria's authentic Berlin experience from tourist to local insider
+            {t('story.subtitle')}
           </p>
         </div>
 
@@ -76,13 +79,13 @@ const StoryboardSection = () => {
         <div className="text-center mt-20">
           <div className="inline-block bg-card/50 backdrop-blur-sm border border-neon-cyan/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Discover Berlin Like a Local?
+              {t('story.ctaTitle')}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Join thousands of explorers already on the waitlist
+              {t('story.ctaSubtitle')}
             </p>
             <div className="bg-gradient-neon px-6 py-3 rounded-full text-dark-concrete font-semibold inline-block">
-              Coming Soon - Get Early Access
+              {t('story.ctaBadge')}
             </div>
           </div>
         </div>

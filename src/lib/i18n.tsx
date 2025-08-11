@@ -118,6 +118,14 @@ export const translations = {
     // Toasts
     "toast.waitlistSuccess": "Welcome to the Discover Berlin waitlist!",
     "toast.merchantSuccess": "Thanks for your interest! We'll be in touch soon.",
+    // Footer
+    "footer.brand": "Discover Berlin",
+    "footer.tagline": "Connecting Berlin's underground culture with authentic local commerce.",
+    "footer.contact": "Contact",
+    "footer.city": "Berlin, Germany",
+    "footer.missionTitle": "Our Mission",
+    "footer.missionBody": "Promoting local communities and authentic Berlin businesses while helping tourists discover the real culture of our city.",
+    "footer.copyright": "© 2024 Discover Berlin. Supporting local Berlin businesses since day one.",
   },
   de: {
     // Hero
@@ -201,5 +209,13 @@ export const translations = {
     // Toasts
     "toast.waitlistSuccess": "Willkommen auf der Discover Berlin Warteliste!",
     "toast.merchantSuccess": "Danke für dein Interesse! Wir melden uns bald.",
+    // Footer
+    "footer.brand": "Discover Berlin",
+    "footer.tagline": "Berlins Underground-Kultur mit echtem lokalem Handel verbinden.",
+    "footer.contact": "Kontakt",
+    "footer.city": "Berlin, Deutschland",
+    "footer.missionTitle": "Unsere Mission",
+    "footer.missionBody": "Lokale Communities und echte Berliner Betriebe fördern und Touristen helfen, die echte Kultur unserer Stadt zu entdecken.",
+    "footer.copyright": "© 2024 Discover Berlin. Wir unterstützen lokale Berliner Unternehmen seit dem ersten Tag.",
   },
 } as const;

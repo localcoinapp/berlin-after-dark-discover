@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Mail, Send, Store } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { supabase } from "@/integrations/supabase/client";
 
 const WaitlistSection = () => {
   const { t } = useI18n();
@@ -17,22 +18,48 @@ const WaitlistSection = () => {
     business: "",
     message: ""
   });
+  const [submittingWaitlist, setSubmittingWaitlist] = useState(false);
+  const [submittingMerchant, setSubmittingMerchant] = useState(false);
 
-  const handleWaitlistSubmit = (e: React.FormEvent) => {
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!waitlistEmail) return;
     
-    toast.success(t('toast.waitlistSuccess'));
-    setWaitlistEmail("");
+    setSubmittingWaitlist(true);
+    const { error } = await supabase
+      .from('waitlist_signups')
+      .insert([{ email: waitlistEmail, source: 'waitlist_form' }]);
+
+    if (error) {
+      toast.error('Failed to join waitlist. Please try again.');
+    } else {
+      toast.success(t('toast.waitlistSuccess'));
+      setWaitlistEmail("");
+    }
+    setSubmittingWaitlist(false);
   };
 
-  const handleMerchantSubmit = (e: React.FormEvent) => {
+  const handleMerchantSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!merchantForm.email || !merchantForm.name) return;
-    
-    // In a real app, this would send to localcoinapp@gmail.com
-    toast.success(t('toast.merchantSuccess'));
-    setMerchantForm({ name: "", email: "", business: "", message: "" });
+
+    setSubmittingMerchant(true);
+    const { error } = await supabase
+      .from('merchant_inquiries')
+      .insert([{ 
+        name: merchantForm.name,
+        email: merchantForm.email,
+        business: merchantForm.business || null,
+        message: merchantForm.message || null,
+      }]);
+
+    if (error) {
+      toast.error('Failed to send inquiry. Please try again.');
+    } else {
+      toast.success(t('toast.merchantSuccess'));
+      setMerchantForm({ name: "", email: "", business: "", message: "" });
+    }
+    setSubmittingMerchant(false);
   };
 
   return (
@@ -81,6 +108,7 @@ const WaitlistSection = () => {
                 variant="club" 
                 size="lg" 
                 className="w-full"
+                disabled={submittingWaitlist}
               >
                 {t('waitlist.joinButton')}
                 <Send className="ml-2 w-4 h-4" />
@@ -169,6 +197,7 @@ const WaitlistSection = () => {
                 variant="underground" 
                 size="lg" 
                 className="w-full"
+                disabled={submittingMerchant}
               >
                 {t('merchant.button')}
                 <Send className="ml-2 w-4 h-4" />

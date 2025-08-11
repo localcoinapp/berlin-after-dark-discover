@@ -38,13 +38,13 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Berlin Techno Theme Colors */
-    --neon-purple: 262 60% 52%;
-    --neon-cyan: 186 60% 42%;
-    --neon-pink: 329 55% 62%;
-    --dark-concrete: 220 15% 8%;
-    --graffiti-bg: 220 15% 12%;
-    --club-dark: 220 15% 6%;
+    /* Grey-Silver Palette */
+    --neon-purple: 0 0% 80%;      /* Silver */
+    --neon-cyan: 210 6% 46%;      /* Steel grey */
+    --neon-pink: 0 0% 90%;        /* Light silver highlight */
+    --dark-concrete: 220 10% 10%;
+    --graffiti-bg: 220 10% 14%;
+    --club-dark: 220 10% 6%;
 
     /* Gradients */
     --gradient-neon: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
@@ -52,10 +52,10 @@ All colors MUST be HSL.
     --gradient-club: linear-gradient(180deg, hsl(var(--graffiti-bg)), hsl(var(--club-dark)));
 
     /* Shadows & Effects */
-    --shadow-neon: 0 0 20px hsl(var(--neon-purple) / 0.5);
-    --shadow-cyan: 0 0 20px hsl(var(--neon-cyan) / 0.5);
-    --shadow-pink: 0 0 20px hsl(var(--neon-pink) / 0.5);
-    --glow-intense: 0 0 40px hsl(var(--neon-purple) / 0.8);
+    --shadow-neon: 0 0 20px hsl(var(--neon-purple) / 0.35);
+    --shadow-cyan: 0 0 20px hsl(var(--neon-cyan) / 0.35);
+    --shadow-pink: 0 0 20px hsl(var(--neon-pink) / 0.3);
+    --glow-intense: 0 0 40px hsl(var(--neon-purple) / 0.6);
 
     /* Animations */
     --transition-club: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);

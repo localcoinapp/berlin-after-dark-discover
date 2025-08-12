@@ -38,10 +38,10 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Grey-Silver Palette */
-    --neon-purple: 0 0% 80%;      /* Silver */
-    --neon-cyan: 210 6% 46%;      /* Steel grey */
-    --neon-pink: 0 0% 90%;        /* Light silver highlight */
+    /* Neon Palette (original) */
+    --neon-purple: 262 83% 58%;      /* Neon purple */
+    --neon-cyan: 186 100% 44%;       /* Neon cyan */
+    --neon-pink: 316 95% 62%;        /* Neon pink */
     --dark-concrete: 220 10% 10%;
     --graffiti-bg: 220 10% 14%;
     --club-dark: 220 10% 6%;

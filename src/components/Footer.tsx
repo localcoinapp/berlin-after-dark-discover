@@ -44,7 +44,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border/30 mt-8 pt-8 text-center">
+        <div className="border-t border-border/30 mt-8 pt-8 text-center space-y-3">
+          <nav className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+            <a href="/impressum" className="hover:underline">Impressum</a>
+            <a href="/datenschutz" className="hover:underline">Datenschutz</a>
+            <a href="/agb" className="hover:underline">AGB</a>
+            <a href="/cookies" className="hover:underline">Cookies</a>
+          </nav>
           <p className="text-muted-foreground text-sm">
             {t('footer.copyright')}
           </p>

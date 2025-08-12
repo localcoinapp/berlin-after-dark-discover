@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Smartphone, MapPin } from "lucide-react";
 import berlinHero from "@/assets/berlin-hero.jpg";
+import berlinBanner from "@/assets/berlin-banner.jpg";
 import { useI18n } from "@/lib/i18n";
 
 const HeroSection = () => {
@@ -31,16 +32,17 @@ const HeroSection = () => {
             </h1>
           </div>
           
-          <p className="text-xl md:text-3xl font-semibold text-foreground/90 mb-6">
-            {t('hero.tagline1')}
-          </p>
-          <p className="text-lg md:text-2xl text-muted-foreground mb-8">
-            {t('hero.tagline2')}
-          </p>
-          
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            {t('hero.description')}
-          </p>
+          {/* Responsive Banner replacing tagline text */}
+          <div className="mx-auto max-w-4xl">
+            <img
+              src={berlinBanner}
+              alt="Berlin hero banner with the Berlin Wall graffiti and the Fernsehturm TV Tower"
+              width={1536}
+              height={864}
+              className="w-full h-auto rounded-xl border border-border/40 shadow-[var(--shadow-neon)]"
+              loading="eager"
+            />
+          </div>
           
           {/* Features Preview */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">

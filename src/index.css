@@ -8,58 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 15% 8%;
-    --foreground: 210 20% 95%;
+    --background: 220 8% 4%;
+    --foreground: 40 8% 92%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 210 20% 95%;
+    --card: 220 8% 6%;
+    --card-foreground: 40 8% 92%;
 
-    --popover: 220 15% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 220 8% 6%;
+    --popover-foreground: 40 8% 92%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 20% 95%;
+    --primary: 25 85% 55%;
+    --primary-foreground: 220 8% 4%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 220 8% 12%;
+    --secondary-foreground: 40 8% 92%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 220 8% 12%;
+    --muted-foreground: 220 8% 65%;
 
-    --accent: 186 100% 44%;
-    --accent-foreground: 220 15% 8%;
+    --accent: 0 0% 88%;
+    --accent-foreground: 220 8% 4%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive: 5 72% 58%;
+    --destructive-foreground: 40 8% 92%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 262 83% 58%;
+    --border: 220 8% 18%;
+    --input: 220 8% 12%;
+    --ring: 25 85% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;
 
-    /* Neon Palette (original) */
-    --neon-purple: 262 83% 58%;      /* Neon purple */
-    --neon-cyan: 186 100% 44%;       /* Neon cyan */
-    --neon-pink: 316 95% 62%;        /* Neon pink */
-    --dark-concrete: 220 10% 10%;
-    --graffiti-bg: 220 10% 14%;
-    --club-dark: 220 10% 6%;
+    /* Street Art Palette - Banksy/Basquiat inspired */
+    --concrete-raw: 220 8% 22%;      /* Raw concrete */
+    --spray-orange: 25 85% 55%;      /* Spray paint orange */
+    --chalk-white: 0 0% 88%;         /* Chalk white */
+    --rust-red: 5 72% 58%;           /* Rust red */
+    --charcoal: 220 8% 4%;           /* Deep charcoal */
+    --stencil-black: 220 15% 8%;     /* Stencil black */
+    --graffiti-wall: 220 8% 15%;     /* Wall texture */
 
-    /* Gradients */
-    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-cyan)));
-    --gradient-underground: linear-gradient(180deg, hsl(var(--club-dark)), hsl(var(--dark-concrete)));
-    --gradient-club: linear-gradient(180deg, hsl(var(--graffiti-bg)), hsl(var(--club-dark)));
+    /* Underground Gradients */
+    --gradient-street: linear-gradient(135deg, hsl(var(--spray-orange)), hsl(var(--rust-red)));
+    --gradient-concrete: linear-gradient(180deg, hsl(var(--charcoal)), hsl(var(--concrete-raw)));
+    --gradient-stencil: linear-gradient(180deg, hsl(var(--graffiti-wall)), hsl(var(--stencil-black)));
 
-    /* Shadows & Effects */
-    --shadow-neon: 0 0 20px hsl(var(--neon-purple) / 0.35);
-    --shadow-cyan: 0 0 20px hsl(var(--neon-cyan) / 0.35);
-    --shadow-pink: 0 0 20px hsl(var(--neon-pink) / 0.3);
-    --glow-intense: 0 0 40px hsl(var(--neon-purple) / 0.6);
+    /* Raw Shadows & Effects */
+    --shadow-spray: 0 4px 20px hsl(var(--spray-orange) / 0.25);
+    --shadow-concrete: 0 8px 40px hsl(var(--charcoal) / 0.6);
+    --shadow-stencil: 0 2px 15px hsl(var(--stencil-black) / 0.8);
+    --texture-rough: 0 0 0 1px hsl(var(--concrete-raw) / 0.3);
 
-    /* Animations */
-    --transition-club: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    --transition-glow: all 0.3s ease-out;
+    /* Street Animations */
+    --transition-street: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-spray: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 

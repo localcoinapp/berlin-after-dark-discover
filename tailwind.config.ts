@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+				fontFamily: {
+				sans: ["Raleway", "sans-serif"],
+				display: ["Belanosima", "cursive"],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

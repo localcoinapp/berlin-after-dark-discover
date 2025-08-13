@@ -43,14 +43,14 @@ export const translations = {
     "hero.brand": "Discover Berlin",
     "hero.tagline1": "Berlin's Underground Culture",
     "hero.tagline2": "Meets Local Commerce",
-    "hero.description": "Connect with Berlin's authentic culture. From underground techno clubs to hidden local gems, discover exclusive deals, book experiences, and chat directly with local merchants.",
+    "hero.description": "Connect with Berlin's authentic culture. From Parties to hidden local gems, discover exclusive deals, book experiences, and chat directly with local merchants.",
     "hero.features.one.title": "One App",
     "hero.features.one.desc": "Everything Berlin in your pocket",
     "hero.features.two.title": "Local Only",
     "hero.features.two.desc": "Support authentic Berlin businesses",
     "hero.features.three.title": "AI Powered",
     "hero.features.three.desc": "Break language barriers effortlessly",
-    "hero.badge": "Coming Soon 2024",
+    "hero.badge": "Coming Soon",
 
     // Features section
     "features.usersTitle": "For Explorers",
@@ -83,7 +83,7 @@ export const translations = {
     "story.step1Title": "Discover",
     "story.step1Desc": "Maria opens the Discover Berlin app on Kreuzberg's streets. Instantly, she sees local restaurants, underground clubs, and unique experiences nearby.",
     "story.step2Title": "Connect",
-    "story.step2Desc": "At Berghain's entrance, Maria and her friends show their pre-booked tickets from the app. No lines, no confusion - just seamless entry to Berlin's most exclusive venues.",
+    "story.step2Desc": "At Club's entrance, Maria and her friends show their pre-booked tickets from the app. No lines, no confusion - just seamless entry to Berlin's most exclusive venues.",
     "story.step3Title": "Experience",
     "story.step3Desc": "Later at a local restaurant in Prenzlauer Berg, they order traditional Berlin dishes through the app, chatting with the chef about ingredients in perfect German thanks to AI translation.",
     
@@ -125,7 +125,7 @@ export const translations = {
     "footer.city": "Berlin, Germany",
     "footer.missionTitle": "Our Mission",
     "footer.missionBody": "Promoting local communities and authentic Berlin businesses while helping tourists discover the real culture of our city.",
-    "footer.copyright": "© 2024 Discover Berlin. Supporting local Berlin businesses since day one.",
+    "footer.copyright": "© 2025 Discover Berlin. Supporting local Berlin businesses since day one.",
   },
   de: {
     // Hero
@@ -134,14 +134,14 @@ export const translations = {
     "hero.brand": "Discover Berlin",
     "hero.tagline1": "Berlins Underground-Kultur",
     "hero.tagline2": "trifft lokalen Handel",
-    "hero.description": "Verbinde dich mit Berlins authentischer Kultur. Von Underground-Techno-Clubs bis zu versteckten Kiez-Perlen – entdecke exklusive Angebote, buche Erlebnisse und chatte direkt mit lokalen Anbietern.",
+    "hero.description": "Verbinde dich mit Berlins authentischer Kultur. Von Parties bis zu versteckten Kiez-Perlen – entdecke exklusive Angebote, buche Erlebnisse und chatte direkt mit lokalen Anbietern.",
     "hero.features.one.title": "Eine App",
     "hero.features.one.desc": "Alles über Berlin in deiner Hosentasche",
     "hero.features.two.title": "Nur lokal",
     "hero.features.two.desc": "Unterstütze echte Berliner Betriebe",
     "hero.features.three.title": "KI-gestützt",
     "hero.features.three.desc": "Sprachbarrieren mühelos überwinden",
-    "hero.badge": "Bald verfügbar 2024",
+    "hero.badge": "Bald verfügbar",
 
     // Features section
     "features.usersTitle": "Für Entdecker",
@@ -174,7 +174,7 @@ export const translations = {
     "story.step1Title": "Entdecken",
     "story.step1Desc": "Maria öffnet die Discover Berlin App in Kreuzberg. Sofort sieht sie lokale Restaurants, Underground-Clubs und besondere Erlebnisse in der Nähe.",
     "story.step2Title": "Verbinden",
-    "story.step2Desc": "Am Berghain-Eingang zeigen Maria und Freunde ihre vorab gebuchten Tickets aus der App. Keine Schlange, keine Verwirrung – einfach reibungsloser Eintritt.",
+    "story.step2Desc": "Am Klub-Eingang zeigen Maria und Freunde ihre vorab gebuchten Tickets aus der App. Keine Schlange, keine Verwirrung – einfach reibungsloser Eintritt.",
     "story.step3Title": "Erleben",
     "story.step3Desc": "Später in einem Restaurant in Prenzlauer Berg bestellen sie Berliner Klassiker über die App und chatten dank KI-Übersetzung auf perfektem Deutsch mit dem Koch.",
 
@@ -216,6 +216,6 @@ export const translations = {
     "footer.city": "Berlin, Deutschland",
     "footer.missionTitle": "Unsere Mission",
     "footer.missionBody": "Lokale Communities und echte Berliner Betriebe fördern und Touristen helfen, die echte Kultur unserer Stadt zu entdecken.",
-    "footer.copyright": "© 2024 Discover Berlin. Wir unterstützen lokale Berliner Unternehmen seit dem ersten Tag.",
+    "footer.copyright": "© 2025 Discover Berlin. Wir unterstützen lokale Berliner Unternehmen seit dem ersten Tag.",
   },
 } as const;

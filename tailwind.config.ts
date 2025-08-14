@@ -18,8 +18,8 @@ export default {
 			}
 		},
 		extend: {
-				fontFamily: {
-				sans: ["Raleway", "sans-serif"],
+			fontFamily: {
+				sans: ["Ubuntu", "sans-serif"],
 				display: ["Belanosima", "cursive"],
 			},
 			colors: {

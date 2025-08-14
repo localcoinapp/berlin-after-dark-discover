@@ -15,6 +15,9 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-charcoal/70" />
       </div>
       
+      {/* Text Overlay */}
+      <div className="absolute inset-0 bg-black/20" />
+      
       {/* Street Art Background Effects */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-spray-orange/15 rounded-none blur-2xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-rust-red/15 rounded-none blur-2xl animate-pulse delay-700" />
@@ -26,17 +29,17 @@ const HeroSection = () => {
           {/* Logo/Brand */}
           <div className="flex items-center justify-center space-x-3 mb-8">
             <MapPin className="w-8 h-8 text-spray-orange" />
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-street bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold font-display text-white">
               {t('hero.brand')}
             </h1>
           </div>
           
           {/* Hero Tagline */}
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-xl md:text-3xl font-light text-chalk-white mb-4">
+            <h2 className="text-xl md:text-3xl font-light font-display text-white mb-4">
               {t('hero.tagline1')}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               {t('hero.description')}
             </p>
           </div>

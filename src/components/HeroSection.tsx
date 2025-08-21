@@ -65,7 +65,8 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <Button asChild variant="glow" size="xl" className="animate-glow-pulse">
+               <Button asChild variant="underground" size="xl">
+            {/* <Button asChild variant="glow" size="xl" className="animate-glow-pulse">*/}
               <a href="#waitlist">
                 {t('hero.ctaWaitlist')}
                 <ArrowRight className="ml-2 w-5 h-5" />

@@ -35,7 +35,7 @@ const HeroSection = () => {
           </div>
           
           {/* Hero Tagline */}
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto bg-card/30 backdrop-blur-sm border border-spray-orange/40 rounded-none p-6">
             <h2 className="text-xl md:text-3xl font-light font-display text-white mb-4">
               {t('hero.tagline1')}
             </h2>
